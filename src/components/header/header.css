@@ -1,0 +1,93 @@
+.headerContainer {
+    height: 55px;
+    background-color: rgba(40, 9, 91, 0.836);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  
+  .headerLeft, .headerRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: azure;
+  }
+  
+  .logoImage {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-bottom: 2.6px;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: azure;
+  }
+  
+  .headerCenter {
+    flex: 2;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBar {
+    width: 100%;
+    height: 32px;
+    background-color: azure;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchIcon {
+    font-size: 18px !important;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: rgba(40, 9, 91, 0.836);
+  }
+  
+  .searchInput {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: rgba(40, 9, 91, 0.836);
+  }
+  
+  .searchInput:focus {
+    outline: none;
+  }
+  
+  .headerLinks {
+    margin-right: 20px;
+  }
+  
+  .headerLink {
+    margin-right: 12px;
+    font-size: 14px;
+    color: azure;
+  }
+  
+  .headerIcons {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .headerUserName {
+    margin-right: 10px;
+    white-space: nowrap; 
+  }
+  
+  .headerUserImage{
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    margin-bottom: 2.6px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
