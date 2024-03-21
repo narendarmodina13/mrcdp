@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../../components/header/Header'
-import Sidenavbar from '../../components/sidenavbar/Sidenavbar'
-
+import Sidebar from '../../components/sidenavbar/Sidebar'
+import './home.css' 
 export default function Home(){
 
 return(
-    <><Header />
-    <Sidenavbar /></>
+    <>
+    <Header />
+    <Sidebar />
+    </>
 )}
