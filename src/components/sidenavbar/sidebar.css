@@ -106,7 +106,6 @@
   max-height: 100%;
 }
 
-/* Highlight and shadow effects for sidebar items */
 .sidebarListItem:hover {
   background-color: rgb(37, 4, 97);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);

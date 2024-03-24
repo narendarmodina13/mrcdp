@@ -53,7 +53,6 @@ export default function Sidebar() {
   };
 
   useEffect(() => {
-    // Focus on the search input when the component mounts
     if (searchRef.current) {
       searchRef.current.focus();
     }
