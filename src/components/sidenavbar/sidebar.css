@@ -1,83 +1,125 @@
-
 .sidebar {
   height: calc(100vh - 55px);
-  overflow-y: auto;
-  position: sticky;
+  overflow-y: scroll;
+  position: fixed;
   top: 55px;
   font-size: small;
-  width: 22%;
+  width: 240px;
   background-color: rgb(37, 4, 97);
   color: azure;
   margin-top: 10px;
   display: flex;
-  z-index: 99; /* Set a slightly lower z-index than header */
+  flex-direction: column;
+  z-index: 96;
 }
 
 .sidebar.collapsed {
-  width: 70px; /* Adjust as needed */
+  width: 70px;
 }
 
 .sidebar.collapsed .sidebarListItemText {
   display: none;
 }
 
-.toggleButton{
+.toggleButton {
   margin-bottom: 9px;
 }
-.sidebar.collapsed .toggleIcon {
-  transform: rotate(180deg); /* Adjust as needed */
+
+.toggleButton:focus {
+  margin-bottom: 9px;
 }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
-  }
-  
-  .sidebarWrapper {
-    padding: 20px;
-    margin-left: 1px;
-  }
-  
-  .sidebarList {
-    padding: 0;  
-    list-style: none;
-  }
-  
-  .sidebarListItem {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-left: 1px;
-  }
-  
-  .sidebarIcon {
-    margin-right: 20px;
-    height: 5%;
-    width: 5px;
-  }
-  
-  .sidebarButton {
-    width: 150px;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 500;
-  }
-  
-  .sidebarHr {
-    margin: 20px 0;
-  }
-  
-  .sidebarFriendList {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
+
+.sidebar.collapsed .toggleIcon {
+  transform: rotate(180deg);
+}
+
+.chevronIcon {
+  margin-left: auto;
+}
+
+.chevronIcon.open::before {
+  content: '\25B2';
+}
+
+.chevronIcon.closed::before {
+  content: '\25BC';
+}
+
+.sidebarWrapper {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 1px;
+}
+
+.sidebarList {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.sidebarListItem {
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.sidebarListItem > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebarListItemText {
+  margin-left: 10px;
+}
+
+.nestedList {
+  background-color: azure;
+  color: black;
+  padding: 18px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.nestedListItemText {
+  margin-left: 10px;
+}
+
+.sidebarHr {
+  margin: 20px 0;
+}
+
+.imageContainer {
+  position: fixed;
+  top: 80%;
+  left: 67%;
+  right: 20px;
+  transform: translate(-60%, -90%);
+  z-index: 99;
+  display: flex;
+  width: 930px;
+  height: 450px;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Highlight and shadow effects for sidebar items */
+.sidebarListItem:hover {
+  background-color: rgb(37, 4, 97);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sidebarListItem:focus {
+  outline: none;
+  background-color: rgb(37, 4, 97);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nestedListItem:focus {
+  outline: none;
+  background-color: rgba(100, 98, 103, 0.678);
+  box-shadow: 0 0 5px 0 rgba(18, 16, 16, 0.5);
+}
